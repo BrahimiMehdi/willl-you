@@ -1,16 +1,18 @@
 import { useState } from "react";
 
-const Button = () => {
+const Button = ({setsuccess}) => {
   const [pos, setpos] = useState({ top: " top-8", left: "left-[35%] " });
   const [count, setCount] = useState(0);
   const randomPos = [
     { top: " top-20", left: "left-20 " },
+    { top: " top-20", left: "left-[80%] " },
+    { top: " top-20", left: "left-[20%] " },
     { top: " top-40", left: "left-60 " },
     { top: " top-40", left: "left-[60%] " },
     { top: " top-60", left: "left-40 " },
+    { top: " top-60", left: "left-[70%] " },
     { top: " top-8", left: "left-4 " },
     { top: " top-72", left: "left-12 " },
-    
   ];
   const changePos = () => {
     if (count < randomPos.length -1) {
@@ -20,6 +22,7 @@ const Button = () => {
     } else {
       const newPos = randomPos[count];
       setCount(0);
+      setsuccess("rude")
       setpos(newPos);
     }
   };
