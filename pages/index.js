@@ -18,7 +18,7 @@ export default function Home() {
         <div className="w-full h-full grid grid-cols-3">
           <div className="relative flex flex-col-reverse  col-start-2">
             <h1 className={`text-4xl z-40 transition-all duration-200 ease-out  text-center ${moon.className} ${success === "rude" ? "bg-gray-800" : success ==="success" ? "bg-pink-900" : "bg-[#001118]"} w-full text-white relative z-10 `}>{success ==="rude" ? "rude" : success ==="success" ? "Thank youuu" :"will you date me?"}</h1>
-            <img  className="object-cover z-0 absolute top-0  h-full w-full object-top" src={`${success ==="notyet" ? "/catdate.webp" : success ==="success" ? "/success.jpg":"/rude.jpg"}`} />
+            <img  className="object-cover transition-all duration-200 z-0 absolute top-0  h-full w-full object-top" src={`${success ==="notyet" ? "/catdate.webp" : success ==="success" ? "/success.jpg":"/rude.jpg"}`} />
           </div>
         </div>
         <div className="relative flex justify-center gap-x-12">
